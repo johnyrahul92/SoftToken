@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="DEBUG">
+	<Appenders>
+		<Console name="Console" target="SYSTEM_OUT">
+			<PatternLayout
+				pattern="%d{ISO8601} %X{USER_ID} %X{UUID} [%t] %-5level %logger{36} - %msg%n" />
+		</Console>
+
+		<File name="SoftTokenLogs" fileName="/Users/gulfbank/Desktop/RahulJohny/logs/SoftToken.log">
+			<PatternLayout
+				pattern="%d{ISO8601} %X{USER_ID} %X{UUID} [%t] %-5level %logger{36} - %msg%n" />
+		</File>
+		
+		<!-- <File name="PayloadTraceLog" fileName="D:/Utility/log4j2util/logs/COBpayload.log">
+			<PatternLayout
+				pattern="%d{ISO8601} %X{USER_ID} %X{UUID} [%t] %-5level %logger{36} - %msg%n" />
+		</File>	
+		
+		<File name="EntryExitLog" fileName="D:/Utility/log4j2util/logs/COBEntryExit.log">
+			<PatternLayout
+				pattern="%d{ISO8601} %X{USER_ID} %X{UUID} [%t] %-5level %logger{36} - %msg%n" />
+		</File>	
+		
+		<File name="PerformanceLog" fileName="D:/Utility/log4j2util/logs/COBPerformance.log">
+			<PatternLayout
+				pattern="%d{ISO8601} %X{USER_ID} %X{UUID} [%t] %-5level %logger{36} - %msg%n" />
+		</File>	
+		
+		<File name="ExceptionLog" fileName="D:/Utility/log4j2util/logs/COBException.log">
+			<PatternLayout
+				pattern="%d{ISO8601} %X{USER_ID} %X{UUID} [%t] %-5level %logger{36} - %msg%n" />
+		</File>	 -->
+	</Appenders>
+	<Loggers>		 
+		<Logger name="com.softToken.SoftToken" additivity="false">			            
+			<AppenderRef ref="SoftTokenLogs" level="debug" />
+			<AppenderRef ref="Console" />			        
+		</Logger>
+		
+		<!-- <Logger name="com.tcs.mea.cob.PayloadLoggingFilter"	additivity="false">			            
+			<AppenderRef ref="PayloadTraceLog" level="debug" />
+			<AppenderRef ref="Console" />			        
+		</Logger>
+		
+		<Logger name="com.tcs.mea.cob.aspect.EntryExitLoggingAspect"	additivity="false">			            
+			<AppenderRef ref="EntryExitLog" level="debug" />
+			<AppenderRef ref="Console" />			        
+		</Logger>
+		
+		<Logger name="com.tcs.mea.cob.aspect.PerformanceLoggingAspect"	additivity="false">			            
+			<AppenderRef ref="PerformanceLog" level="debug" />
+			<AppenderRef ref="Console" />			        
+		</Logger>
+		
+		<Logger name="com.tcs.mea.cob.aspect.ExceptionLoggingAspect"	additivity="false">			            
+			<AppenderRef ref="ExceptionLog" level="debug" />
+			<AppenderRef ref="Console" />			        
+		</Logger> -->
+
+		<Root level="DEBUG" includeLocation="false">
+			<AppenderRef ref="Console" />
+		</Root>
+	</Loggers>
+</Configuration>

@@ -1,0 +1,22 @@
+<fop version="1.0">
+
+	
+    <!-- Base URL for resolving relative URLs -->
+    <base>./</base>
+
+    <!-- Font Base URL for resolving relative font URLs -->
+    <font-base>./</font-base>
+
+    <renderers>
+        <renderer mime="application/pdf">
+            <fonts>
+                <!-- register Arial -->
+                <font kerning="yes" embed-url="fonts/arial.ttf" embedding-mode="full">
+                    <font-triplet name="Arial" style="normal" weight="normal"/>
+                </font>
+                
+                
+            </fonts>
+        </renderer>
+    </renderers>
+</fop>
