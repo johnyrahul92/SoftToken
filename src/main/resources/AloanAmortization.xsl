@@ -4,7 +4,8 @@
 	xmlns:svg="http://www.w3.org/2000/svg" xmlns:fo="http://www.w3.org/1999/XSL/Format"
 	version="1.0" xmlns:java="http://xml.apache.org/xslt/java"
 	exclude-result-prefixes="java">
-	<xsl:output doctype-public="-//W3C//DTD HTML 4.01 Transitional//EN"	method="pdf" indent="yes" encoding="utf-8" />
+	<xsl:output doctype-public="-//W3C//DTD HTML 4.01 Transitional//EN"
+		method="pdf" indent="yes" encoding="utf-8" />
 
 	<xsl:template match="/">
 		<fo:root xmlns:fo="http://www.w3.org/1999/XSL/Format"
@@ -269,6 +270,7 @@
 											<fo:block font-weight="bold" font-size="9px">
 												Total
 												Interest
+												<xsl:value-of select="faml/response/loginresponsedto/udffields/udfdto[udfname = 'idCustomer']/udfvalue"/>
 											</fo:block>
 										</fo:table-cell>
 										<fo:table-cell padding="2px" text-align="center">
@@ -348,7 +350,7 @@
 
 						Transactions
 						<fo:block margin-top="5px">
-							<fo:table text-align="center" border="0.8pt solid black"
+							<!-- <fo:table text-align="center" border="0.8pt solid black"
 								border-before-width.length="1pt"
 								border-before-width.conditionality="retain"
 								border-after-width.length="1pt"
@@ -418,7 +420,7 @@
 									</xsl:for-each>
 								</fo:table-body>
 
-							</fo:table>
+							</fo:table> -->
 
 						</fo:block>
 

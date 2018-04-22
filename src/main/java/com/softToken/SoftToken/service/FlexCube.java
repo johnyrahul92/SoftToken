@@ -32,7 +32,7 @@ public class FlexCube {
 		RestTemplate restTemplate = new RestTemplate();
 
 		JSONObject jsonObject = new JSONObject();
-		JSONParser jsonParser = new JSONParser();	
+		JSONParser jsonParser = new JSONParser();
 		MultiValueMap<String, String> map = new LinkedMultiValueMap<String, String>();
 		map.add("fldLoginUserId", "DEVRETAIL4");
 		map.add("fldlanguage", "eng");
@@ -42,7 +42,6 @@ public class FlexCube {
 		map.add("fldUserType", "EN1");
 		map.add("fldHiddenTxnId", "TFC");
 
-		
 		try {
 			ResponseEntity<String> response = restTemplate.postForEntity(url, map, String.class);
 			StreamSource xmlSource = new StreamSource(new StringReader(response.getBody()));
@@ -57,8 +56,8 @@ public class FlexCube {
 
 			transformer.transform(xmlSource, res);
 			StringBuffer sb = outWriter.getBuffer();
-			
-			jsonObject=(JSONObject) jsonParser.parse(sb.toString());
+
+			jsonObject = (JSONObject) jsonParser.parse(sb.toString());
 		} catch (TransformerException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -66,10 +65,28 @@ public class FlexCube {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		
-		
 
 		return jsonObject;
+	}
+
+	public String getXML() {
+
+		RestTemplate restTemplate = new RestTemplate();
+
+		JSONObject jsonObject = new JSONObject();
+		JSONParser jsonParser = new JSONParser();
+		MultiValueMap<String, String> map = new LinkedMultiValueMap<String, String>();
+		map.add("fldLoginUserId", "DEVRETAIL4");
+		map.add("fldlanguage", "eng");
+		map.add("fldDeviceId", "01");
+		map.add("fldLangId", "eng");
+		map.add("fldRequestId", "RRTFC11");
+		map.add("fldUserType", "EN1");
+		map.add("fldHiddenTxnId", "TFC");
+
+		ResponseEntity<String> response = restTemplate.postForEntity(url, map, String.class);
+		return response.getBody();
+
 	}
 
 }

@@ -2,6 +2,7 @@ package com.softToken.SoftToken.controller;
 
 import java.io.File;
 import java.io.IOException;
+import java.io.StringReader;
 import java.security.InvalidKeyException;
 import java.security.NoSuchAlgorithmException;
 
@@ -93,7 +94,8 @@ public class SoftTokenController {
 		File xsltFile = new File("src/main/resources/AloanAmortization.xsl");
 		File configFile = new File("src/main/resources/fop_config.xml");
 
-		StreamSource xmlSource = new StreamSource(new File("src/main/resources/Employees.xml"));
+		StreamSource xmlSource = new StreamSource(new StringReader(flexcube.getXML()));
+		//StreamSource xmlSource = new StreamSource(new File("src/main/resources/Employees.xml"));
 
 		// create an instance of fop factory
 		FopFactory fopFactory = FopFactory.newInstance();
@@ -104,6 +106,7 @@ public class SoftTokenController {
 		ServletOutputStream out = null;
 		
 		out=response.getOutputStream();
+		
 
 		
 			
