@@ -1,4 +1,4 @@
-package com.softToken.SoftToken.service;
+package com.softToken.service;
 
 import java.security.InvalidKeyException;
 import java.security.NoSuchAlgorithmException;
@@ -13,9 +13,9 @@ import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.softToken.SoftToken.Dao.SoftTokenDao;
-import com.softToken.SoftToken.dto.CategoriesDo;
-import com.softToken.SoftToken.util.TimeBasedOneTimePasswordGenerator;
+import com.softToken.Dao.SoftTokenDao;
+import com.softToken.dto.CategoriesDo;
+import com.softToken.util.TimeBasedOneTimePasswordGenerator;
 
 @Service
 public class SoftTokenService {

@@ -1,4 +1,4 @@
-package com.softToken.SoftToken.dto;
+package com.softToken.dto;
 
 import java.io.Serializable;
 import java.util.HashSet;

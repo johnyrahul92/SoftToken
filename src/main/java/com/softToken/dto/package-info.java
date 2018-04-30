@@ -5,4 +5,4 @@
  * @author gulfbank
  *
  */
-package com.softToken.SoftToken.dto;
+package com.softToken.dto;

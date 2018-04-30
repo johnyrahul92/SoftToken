@@ -1,4 +1,4 @@
-package com.softToken.SoftToken.util;
+package com.softToken.util;
 
 /* Copyright (c) 2016 Jon Chambers
  *

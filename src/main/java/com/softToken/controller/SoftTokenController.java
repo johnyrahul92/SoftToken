@@ -1,4 +1,5 @@
-package com.softToken.SoftToken.controller;
+package com.softToken.controller;
+
 
 import java.io.File;
 import java.io.IOException;
@@ -27,15 +28,17 @@ import org.apache.logging.log4j.Logger;
 import org.json.simple.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.env.Environment;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import org.xml.sax.SAXException;
 
-import com.softToken.SoftToken.dto.CategoriesDo;
-import com.softToken.SoftToken.service.FlexCube;
-import com.softToken.SoftToken.service.SoftTokenService;
+import com.softToken.dto.CategoriesDo;
+import com.softToken.service.FlexCube;
+import com.softToken.service.SoftTokenService;
 
 @RestController
 @RequestMapping("/soft")
@@ -52,16 +55,19 @@ public class SoftTokenController {
 	@Autowired
 	private Environment env;
 
-	// @GetMapping("/{key}")
-	// public int index(@PathVariable String key) throws InvalidKeyException,
-	// NoSuchAlgorithmException {
-	//
-	// //return softTokenService.getOtp(key);
-	// System.out.println("inside controller for test catrgory");
-	// return 1;
-	//
-	// }
-	//
+	 @GetMapping("/{key}")
+	 public int getToken(@PathVariable String key) throws InvalidKeyException,
+	 NoSuchAlgorithmException {
+	
+	 //return softTokenService.getOtp(key);
+	 System.out.println("inside controller for test catrgory");
+	 return 1;
+	
+	 }
+	
+	
+	
+	
 	@GetMapping("/category/{key}")
 	public CategoriesDo getCategoryName(@PathVariable int key) {
 

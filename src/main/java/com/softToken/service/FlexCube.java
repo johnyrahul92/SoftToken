@@ -1,4 +1,4 @@
-package com.softToken.SoftToken.service;
+package com.softToken.service;
 
 import java.io.File;
 import java.io.StringReader;

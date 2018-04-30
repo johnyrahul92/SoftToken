@@ -1,5 +1,5 @@
 
-package com.softToken.SoftToken.Dao;
+package com.softToken.Dao;
 
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
@@ -9,7 +9,7 @@ import org.apache.logging.log4j.Logger;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 
-import com.softToken.SoftToken.dto.CategoriesDo;
+import com.softToken.dto.CategoriesDo;
 
 
 

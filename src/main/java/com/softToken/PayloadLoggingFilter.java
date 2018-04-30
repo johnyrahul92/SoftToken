@@ -3,7 +3,7 @@
  * This software is the proprietary to TCS.
  * Use is subject to license terms.
  */
-package com.softToken.SoftToken;
+package com.softToken;
 
 import java.util.Map;
 
